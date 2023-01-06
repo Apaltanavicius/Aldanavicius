@@ -1,0 +1,60 @@
+body {
+    background: rebeccapurple;
+}
+section {
+    text-align: center;
+    margin-top: 100px;
+}
+.box {
+    width: 200px;
+    height: 200px;
+    line-height: 200px;
+    text-align: center;
+    background: white;
+    display: inline-block;
+    border-radius: 8px;
+    font-size: 1.5em;
+    color: rebeccapurple;
+    margin: 10px;
+    font-weight: bold;
+    transition: 0.3s;
+    letter-spacing: 5px;
+}
+.rotate:hover {
+    transform: rotate(360deg);
+}
+.rotate:hover::before {
+    content: "Hi";
+    transition: 0.3s;
+}
+.loader {
+    width: 100px;
+    height: 100px;
+    margin: 200px auto;
+    animation: loader 4s infinite;
+}
+@keyframes loader {
+    0%   {
+        background-color: red;
+    }
+    25%  {
+        background-color: goldenrod;
+        transform: rotate(180deg) scale(0.9);
+        border-radius: 20px;
+    }
+    50%  {
+        background-color: blue;
+        transform: rotate(360deg);
+        border-radius: 0px;
+    }
+    75% {
+        background-color: green;
+        transform: rotate(540deg) scale(0.9);
+        border-radius: 20px;
+    }
+    100% {
+        background-color: orange;
+        transform: rotate(720deg);
+        border-radius: 0px;
+    }
+}
